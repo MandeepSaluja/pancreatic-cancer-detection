@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Prediction</title>
+</head>
+<body>
+    <!-- Page title -->
+    <h1>Pancreatic Cancer Prediction</h1>
+    
+    <!-- Diagnosis prediction form -->
+    <form action="/predict" method="post">
+        <!-- Age input -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="0" max="120" value="30"><br><br>
+        
+        <!-- Sex selection -->
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+
+        <!-- Cohort type selection -->
+        <label for="cohort_type">Cohort Type:</label>
+        <select id="cohort_type" name="cohort_type">
+            <option value="Cohort1">Cohort1</option>
+            <option value="Cohort2">Cohort2</option>
+        </select><br><br>
+
+        <!-- Sample origin selection -->
+        <label for="sample_origin">Sample Origin:</label>
+        <select id="sample_origin" name="sample_origin">
+            <option value="BPTB">BPTB</option>
+            <option value="LIV">LIV</option>
+            <option value="ESP">ESP</option>
+            <option value="UCL">UCL</option>
+        </select><br><br>
+
+        <!-- Creatinine input -->
+        <label for="creatinine">Creatinine:</label>
+        <input type="number" id="creatinine" name="creatinine" step="0.01" value="1.0"><br><br>
+
+        <!-- LYVE1 input -->
+        <label for="LYVE1">LYVE1:</label>
+        <input type="number" id="LYVE1" name="LYVE1" step="0.01" value="1.0"><br><br>
+
+        <!-- REG1B input -->
+        <label for="REG1B">REG1B:</label>
+        <input type="number" id="REG1B" name="REG1B" step="0.01" value="1.0"><br><br>
+
+        <!-- Submit button -->
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
